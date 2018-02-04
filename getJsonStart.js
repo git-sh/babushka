@@ -1,4 +1,4 @@
-//let retter;
+let retter;
 let forretter = retter.filter(ret => ret.kategori == "forretter");
 let hovedretter = retter.filter(ret => ret.kategori == "hovedretter");
 let desserter = retter.filter(ret => ret.kategori == "desserter");
