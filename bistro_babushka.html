@@ -71,10 +71,10 @@ function visRetter(retter) {
 	retter.forEach(hverRet => {
 		//klon template og indsæt ret properties
 		let klon = menuTemplate.cloneNode(true).content;
-		klon.querySelektor("[data-navn]").textContent = hverRet.navn;
-		klon.querySelektor("[data-kortbeskrivelse]").textContent = hverRet.kortbeskrivelse;
-		klon.querySelektor("[data-pris]").textContent = hverRet.pris;
-		klon.querySelektor("[data-billede]").setAttribute("src", "img/small/" + hverRet.billede + "-sm.jpg")
+		klon.querySelector("[data-navn]").textContent = hverRet.navn;
+		klon.querySelector("[data-kortbeskrivelse]").textContent = hverRet.kortbeskrivelse;
+		klon.querySelector("[data-pris]").textContent = hverRet.pris;
+		klon.querySelector("[data-billede]").setAttribute("src", "img/small/" + hverRet.billede + "-sm.jpg")
 		templateModtager.appendChild(klon);
 	});
 }
