@@ -8,7 +8,7 @@ async function hentJson() {
 	//hent json
 	let jsonData = await fetch("json/menu.json");
 	retter = await jsonData.json();
-	//console.log(retter);
+	console.log(retter);
 	//kald visretter med de nye arrays
 	document.querySelector('#filter-alle').addEventListener("click", () => {
 	visRetter(retter) });
