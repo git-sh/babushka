@@ -41,9 +41,11 @@
 let retter = [];
 
 		document.addEventListener("DOMContentLoaded", hentJson);
+		document.querySelector(".overskrift").textContent=kategori;
 
 async function hentJson() {
 	//hent json
+	let kategori=location
 	let jsonData = await fetch("menu.json");
 	retter = await jsonData.json();
 	//console.log(retter);
