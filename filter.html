@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Babushka copy</title>
+        <style>
+            .retContainer{
+                display:grid;
+                grid-template-columns:1fr 1fr 1fr;
+            }
+
+			body {
+				 background-color:lightcyan;
+			}
+
+			 .toptitle {
+			  color: firebrick;
+		  }
+
+			header {
+				width: 100vw;
+				max-height: 200px;
+				background-color: lightsteelblue;
+			}
+
+			footer {
+				 display:grid;
+				grid-template-columns:1fr 1fr 1fr;
+				 background-color: darkgray;
+				padding: 5px 0 0 5px;
+				width:100vw;
+			}
+
+			#retindhold {
+				text-decoration: none;
+			}
+
+			.ret {
+				background-color: navajowhite;
+				margin: 5px 5px 5px 5px;
+				padding: 5px 5px 5px 5px;
+
+			}
+
+			p {
+				font-size: 20px;
+				color: black;
+			}
+
+        </style>
+    </head>
+    <body>
+        <header><h1 class="toptitle">BISTRO BABUSHKA</h1>
+            <nav>
+               <a href="index.html">
+				   <button>Alle retter</button></a>
+               <a href="filter.html?kategori=forretter">
+				   <button>Forretter</button></a>
+               <a href="filter.html?kategori=hovedretter">
+				   <button>Hovedretter</button></a>
+               <a href="filter.html?kategori=desserter">
+				   <button>Desserter</button></a>
+               <a href="filter.html?kategori=drikkevarer">
+				   <button>Drikkevarer</button></a>
+            </nav>
+            <h1 class="overskrift">Menu</h1>
+        </header>
+        <main class ="retContainer">  </main>
+
+	   <template class = "retTemplate">
+            <article class = "ret">
+                <a data-single href="" id="retindhold">
+                    <ins><h2 class = "overskrift" data-navn ></h2></ins>
+                    <img class = "billede" data-billede src = "" alt = "">
+                    <p class="kortBeskrivelse"  data-kortbeskrivelse></p>
+                    <p>Pris: <span class="pris"  data-pris ></span> kr</p>
+                </a>
+            </article>
+        </template>
+
+          <footer>
+        	<address class="culomn"><p><b>Addresse: </b></p>
+<p>Grønnegade 97</p>
+<p>1234 København K</p>
+</address><address class="culomn">
+<p><b>Åbningstider:</b></p>
+	<p>Mandag - fredag 10:30 - 22:00</p>
+<p>Lørdag 12:00 - 23:00</p></address>
+       <address>
+       	<p><b>Navn:</b> Samoon Hewaddost</p>
+       	<p><b>Hold:</b> A</p>
+       </address>
+        </footer>
+        <script>
+            let retter = [];
+            document.addEventListener("DOMContentLoaded", hentJson);
+            async function hentJson() {
+                let jsonData = await fetch("json/menu.json");
+                retter = await jsonData.json();
+                visRetter();
+            }
+            function visRetter(){
+                let temp = document.querySelector(".retTemplate");
+                let dest = document.querySelector(".retContainer");
+
+				retter.forEach(ret => {
+					if(ret.kategori==kategori){
+                    let klon = temp.cloneNode(true).content;
+                    klon.querySelector("[data-navn]").textContent = ret.navn;
+                    klon.querySelector("[data-billede]").src = "imgs/small/"+ret.billede+"-sm.jpg";
+                    klon.querySelector("[data-billede]").alt = "Billede af "+ret.navn;
+                    klon.querySelector("[data-kortbeskrivelse]").textContent = ret.kortbeskrivelse;
+                    klon.querySelector("[data-pris]").textContent = ret.pris;
+                     klon.querySelector("[data-single]").href = "single.html?id=" + ret.id;
+                    dest.appendChild(klon);
+					}
+                });
+
+            }
+
+			let kategori = location.href.split("=")[1];
+		console.log(kategori);
+		//alert(kategori);
+		document.querySelector(".overskrift").textContent=kategori;
+        </script>
+    </body>
+</html>
