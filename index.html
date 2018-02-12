@@ -7,6 +7,9 @@
             .retContainer{
                 display:grid;
                 grid-template-columns:1fr 1fr 1fr;
+				grid-template-rows:auto;
+				height: auto;
+				grid-gap: 5px;
             }
 
 			body {
@@ -37,7 +40,7 @@
 
 			.ret {
 				background-color: navajowhite;
-				margin: 5px 5px 5px 5px;
+				/*margin: 5px 5px 5px 5px;*/
 				padding: 5px 5px 5px 5px;
 
 			}
@@ -45,6 +48,10 @@
 			p {
 				font-size: 20px;
 				color: black;
+			}
+
+			img {
+				width: 100%;
 			}
 
         </style>
@@ -109,8 +116,8 @@
                     klon.querySelector("[data-billede]").alt = "Billede af "+ret.navn;
                     klon.querySelector("[data-kortbeskrivelse]").textContent = ret.kortbeskrivelse;
                     klon.querySelector("[data-pris]").textContent = ret.pris;
-                     klon.querySelector("[data-single]").href = "single.html?id=" + ret.id;
-                    dest.appendChild(klon);
+                    klon.querySelector("[data-single]").href = "single.html?id=" + ret.id;
+                    dest.appendChild(klon); //Vi smider alt indholdet i kontaineren
                 });
             }
         </script>
