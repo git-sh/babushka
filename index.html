@@ -4,13 +4,36 @@
         <meta charset="utf-8">
         <title>Babushka copy</title>
         <style>
-            .retContainer{
+			.retTemplate {
+				max-width: 100%;
+			}
+            .retContainer {
                 display:grid;
                 grid-template-columns:1fr 1fr 1fr;
 				grid-template-rows:auto;
 				height: auto;
 				grid-gap: 5px;
+				max-width: 100%;
             }
+
+			@media only screen and (min-width : 768px) and (max-width : 1024px) {
+				.retContainer{
+                grid-template-columns:1fr 1fr;
+				}
+			}
+
+			/* Iphone (portrait and landscape) ----------- */
+			@media only screen and (min-width : 320px) and (max-width : 480px) {
+				.retContainer{
+                grid-template-columns: 1fr;
+				}
+			}
+			/* Smartphones (portrait and landscape) ----------- */
+			@media only screen and (min-width : 480px) and (max-width : 800px) {
+				.retContainer{
+                grid-template-columns: 1fr;
+				}
+			}
 
 			body {
 				 background-color:lightcyan;
@@ -27,9 +50,9 @@
 			}
 
 			footer {
-				 display:grid;
+				display:grid;
 				grid-template-columns:1fr 1fr 1fr;
-				 background-color: darkgray;
+				background-color: darkgray;
 				padding: 5px 0 0 5px;
 				width:100vw;
 			}
@@ -42,6 +65,7 @@
 				background-color: navajowhite;
 				/*margin: 5px 5px 5px 5px;*/
 				padding: 5px 5px 5px 5px;
+				max-width: 100%;
 
 			}
 
@@ -75,7 +99,7 @@
         <main class ="retContainer">  </main>
 
 	   <template class ="retTemplate">
-            <article class = "ret" >
+            <article class = "ret" data-ret>
                 <a data-single href="" id="retindhold">
 					<ins><h2 class = "overskrift" data-navn ></h2></ins>
                     <img class = "billede" data-billede src = "" alt = "">
