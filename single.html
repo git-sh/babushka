@@ -9,6 +9,8 @@
                 grid-template-columns:1fr ;
 				height: 1fr;
 				grid-gap: 5px;
+				max-width: 100%;
+				margin: 5px auto 5px auto;
             }
 
 			body {
@@ -17,12 +19,17 @@
 
 			 .toptitle {
 			  color: firebrick;
+				 font-size: 40px;
+				 font-family: Jokerman;
+				 text-align: center;
+				 margin-top: 10vw;
+				 margin-left: 2vw;
 		  }
 
 			header {
 				width: 100vw;
-				max-height: 200px;
-				background-color: lightsteelblue;
+				background-color: none;
+				position: fixed;
 			}
 
 			footer {
@@ -44,6 +51,10 @@
 
 			}
 
+		  h1 {
+				font-family:Carnivalee Freakshow;
+			}
+
 			p {
 				font-size: 20px;
 				color: black;
@@ -53,11 +64,39 @@
 				width: 100%;
 			}
 
+		  			#splash {
+				   width: 100vw;
+    height: auto;
+    background-image: url(imgs/foodtable.png);
+    background-size: cover;
+				display: flex;
+			}
+
+			#splash .ikon {
+    padding: 11px;
+    width: 20vw;
+    box-sizing: content-box;
+}
+			nav {
+				text-align: center;
+				margin-top: 1vw;
+			}
+
+			button {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
+
         </style>
     </head>
     <body>
         <header>
-            <h1 class="toptitle">BISTRO BABUSHKA</h1>
             <nav>
                     <a href="index.html">
 				   <button>Alle retter</button></a>
@@ -71,6 +110,15 @@
 				   <button>Drikkevarer</button></a>
             </nav>
         </header>
+         <section id="splash">
+        <div class="ikon">
+
+        <img src="imgs/logo.png" id="logo">
+
+        </div>
+         <h1 class="toptitle">BISTRO BABUSHKA</h1>
+
+         </section>
         <main class ="retContainer">
             <article class = "ret">
                     <h2 class = "overskrift" data-navn ></h2>

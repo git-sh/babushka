@@ -14,6 +14,7 @@
 				height: auto;
 				grid-gap: 5px;
 				max-width: 100%;
+				margin: 5px auto 5px auto;
             }
 
 			@media only screen and (min-width : 768px) and (max-width : 1024px) {
@@ -37,17 +38,24 @@
 
 			body {
 				 background-color:lightcyan;
+				font-family:Bebas Neue;
 			}
 
 			 .toptitle {
 			  color: firebrick;
+				 font-size: 40px;
+				 font-family: Jokerman;
+				 text-align: center;
+				 margin-top: 10vw;
+				 margin-left: 2vw;
 		  }
 
 			header {
 				width: 100vw;
-				max-height: 200px;
-				background-color: lightsteelblue;
+				background-color: none;
+				position: fixed;
 			}
+
 
 			footer {
 				display:grid;
@@ -66,7 +74,6 @@
 				/*margin: 5px 5px 5px 5px;*/
 				padding: 5px 5px 5px 5px;
 				max-width: 100%;
-
 			}
 
 			p {
@@ -74,14 +81,53 @@
 				color: black;
 			}
 
+			h1 {
+				font-family:Carnivalee Freakshow;
+			}
+
 			img {
 				width: 100%;
+				height: auto;
 			}
+
+			#retindhold:hover .billede {
+  				opacity: 0.7;
+			}
+
+			#splash {
+				   width: 100vw;
+    height: auto;
+    background-image: url(imgs/foodtable.png);
+    background-size: cover;
+				display: flex;
+			}
+
+			#splash .ikon {
+    padding: 11px;
+    width: 20vw;
+    box-sizing: content-box;
+}
+			nav {
+				text-align: center;
+				margin-top: 1vw;
+			}
+
+			button {
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+button:hover {
+    background-color: #008CBA;
+    color: white;
+}
 
         </style>
     </head>
     <body>
-        <header><h1 class="toptitle">BISTRO BABUSHKA</h1>
+        <header>
+
             <nav>
                <a href="index.html">
 				   <button>Alle retter</button></a>
@@ -93,9 +139,19 @@
 				   <button>Desserter</button></a>
                <a href="filter.html?kategori=drikkevarer">
 				   <button>Drikkevarer</button></a>
-            </nav>
-            <h1>Menu</h1>
+        <h1>Menu</h1>
+			</nav>
+
         </header>
+        <section id="splash">
+        <div class="ikon">
+
+        <img src="imgs/logo.png" id="logo">
+
+        </div>
+         <h1 class="toptitle">BISTRO BABUSHKA</h1>
+
+         </section>
         <main class ="retContainer">  </main>
 
 	   <template class ="retTemplate">
