@@ -45,16 +45,10 @@
 
 
 			body {
-				 background-color:lightcyan;
+				 /*background-color:#008cba;*/
 				font-family:ABeeZee ;
+				background: linear-gradient(#6ed9ff, #008cba);
 			}
-
-			 .toptitle {
-			  color: firebrick;
-				 font-size: 40px;
-				 font-family: Jokerman;
-				 align-self: center;
-		  }
 
 			header {
 				width: 100vw;
@@ -66,7 +60,7 @@
 				display:grid;
 				grid-template-columns:1fr 1fr 1fr;
 				background-color: darkgray;
-				padding: 5px 0 0 5px;
+				padding: 5px 5px 5px 5px;
 				width:100vw;
 			}
 
@@ -75,7 +69,7 @@
 			}
 
 			.ret {
-				background-color: navajowhite;
+				background-color: #ffe8c2;
 				/*margin: 5px 5px 5px 5px;*/
 				padding: 5px 5px 5px 5px;
 				max-width: 100%;
@@ -100,10 +94,10 @@
 			}
 
 			#splash {
-				   width: 100vw;
+	width: 100vw;
     height: auto;
     background-image: url(imgs/foodtable.png);
-    background-size: cover;
+    background-size:cover ;
 				display: flex;
 			}
 
@@ -134,7 +128,12 @@
 			.menu {
 				padding-top: 1px;
 				background-color: darkgray;
-				max-width: 100%;
+				width:100vw;
+				text-align: center;
+			}
+
+			.overskrift {
+				color: #008bdc;
 			}
 
         </style>
@@ -148,11 +147,7 @@
         <img src="imgs/logo.png" id="logo">
 			</a>
         </div>
-         <h1 class="toptitle">BISTRO BABUSHKA</h1>
-
-         </section>
-          <article class="menu">
-           <nav>
+          <nav>
   				<a href="index.html">
 				   <button><b>ALLE RETTER</b></button></a>
                <a href="filter.html?kategori=forretter">
@@ -163,8 +158,12 @@
 				   <button><b>DESSERTER</b></button></a>
                <a href="filter.html?kategori=drikkevarer">
 				   <button><b>DRIKKEVARER</b></button></a>
-         <h2 class="overskrift">Menu</h2>
+
 			</nav>
+
+         </section>
+          <article class="menu">
+         <h2 class="overskrift" style="color: #ad4912;">Menu</h2>
        </article>
         <main class ="retContainer">  </main>
 

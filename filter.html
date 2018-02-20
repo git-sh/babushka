@@ -43,30 +43,21 @@
 			}
 
 			body {
-				 background-color:lightcyan;
+				background: linear-gradient(#6ed9ff, #008cba);
 				font-family:ABeeZee ;
 			}
 
-			  .toptitle {
-			  color: firebrick;
-				 font-size: 40px;
-				 font-family: Jokerman;
-				 align-self: center;
-		  }
-
 			header {
-				width: 100vw;
+				width:100vw;
 				background-color: none;
 				position: fixed;
 			}
-
-
 
 			footer {
 				 display:grid;
 				grid-template-columns:1fr 1fr 1fr;
 				 background-color: darkgray;
-				padding: 5px 0 0 5px;
+				padding: 5px 5px 5px 5px;
 				width:100vw;
 			}
 
@@ -75,10 +66,8 @@
 			}
 
 			.ret {
-				background-color: navajowhite;
-				/*margin: 5px 5px 5px 5px;*/
+				background-color: #ffe8c2;
 				padding: 5px 5px 5px 5px;
-
 			}
 
 			p {
@@ -101,7 +90,7 @@
 			}
 
 			#splash {
-				   width: 100vw;
+	width: 100vw;
     height: auto;
     background-image: url(imgs/foodtable.png);
     background-size: cover;
@@ -134,15 +123,18 @@ button:hover {
 			.menu {
 				padding-top: 1px;
 				background-color: darkgray;
-				max-width: 100%;
+				width:100vw;
+				text-align: center;
 			}
 
+			.overskrift {
+				color: #008bdc;
+			}
 
         </style>
     </head>
     <body>
         <header>
-
 
         </header>
         <section id="splash">
@@ -151,11 +143,7 @@ button:hover {
         <img src="imgs/logo.png" id="logo">
 		</a>
         </div>
-         <h1 class="toptitle">BISTRO BABUSHKA</h1>
-
-         </section>
-         <article class="menu">
-          <nav>
+         <nav>
   				<a href="index.html">
 				   <button><b>ALLE RETTER</b></button></a>
                <a href="filter.html?kategori=forretter">
@@ -166,8 +154,11 @@ button:hover {
 				   <button><b>DESSERTER</b></button></a>
                <a href="filter.html?kategori=drikkevarer">
 				   <button><b>DRIKKEVARER</b></button></a>
-           <h2 class="overskrift">Menu</h2>
             </nav>
+
+         </section>
+         <article class="menu">
+          <h2 class="overskrift" style="color: #ad4912;"></h2>
            </article>
         <main class ="retContainer">  </main>
 	   <template class = "retTemplate">

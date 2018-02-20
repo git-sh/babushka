@@ -19,7 +19,7 @@
             }
 
 			body {
-				 background-color:lightcyan;
+				background: linear-gradient(#6ed9ff, #008cba);
 				font-family:ABeeZee;
 			}
 
@@ -40,7 +40,7 @@
 				display:grid;
 				grid-template-columns:1fr 1fr 1fr;
 				background-color: darkgray;
-				padding: 5px 0 0 5px;
+				padding: 5px 5px 5px 5px;
 				width:100vw;
 			}
 
@@ -103,6 +103,11 @@ button:hover {
 				padding-top: 1px;
 				background-color: darkgray;
 				max-width: 100%;
+			  	padding-bottom: 5px;
+			}
+
+		  .overskrift {
+				color: #008bdc;
 			}
 
         </style>
@@ -117,11 +122,7 @@ button:hover {
         <img src="imgs/logo.png" id="logo">
 		</a>
         </div>
-         <h1 class="toptitle">BISTRO BABUSHKA</h1>
-
-         </section>
-         <section class="menu">
-        	 <nav>
+         <nav>
                <a href="index.html">
 				   <button><b>ALLE RETTER</b></button></a>
                <a href="filter.html?kategori=forretter">
@@ -132,7 +133,9 @@ button:hover {
 				   <button><b>DESSERTER</b></button></a>
                <a href="filter.html?kategori=drikkevarer">
 				   <button><b>DRIKKEVARER</b></button></a>
-            </nav>
+         </nav>
+         </section>
+         <section class="menu">
             </section>
         <main class ="retContainer">
             <article class = "ret">
