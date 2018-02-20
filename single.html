@@ -4,27 +4,30 @@
         <meta charset="utf-8">
         <title>Babushka copy</title>
       <style>
+		  * {
+				margin:0px;
+				padding:0px;
+			}
+
             .retContainer{
                 display:grid;
                 grid-template-columns:1fr ;
 				height: 1fr;
 				grid-gap: 5px;
-				max-width: 100%;
+				max-width: 80vw;
 				margin: 5px auto 5px auto;
             }
 
 			body {
 				 background-color:lightcyan;
-				font-family:Bebas Neue;
+				font-family:ABeeZee;
 			}
 
 			 .toptitle {
 			  color: firebrick;
 				 font-size: 40px;
 				 font-family: Jokerman;
-				 text-align: center;
-				 margin-top: 10vw;
-				 margin-left: 2vw;
+				 align-self: center;
 		  }
 
 			header {
@@ -52,8 +55,8 @@
 
 			}
 
-		  h1 {
-				font-family:Carnivalee Freakshow;
+		  h2 {
+				font-family:Bebas Neue;
 			}
 
 			p {
@@ -87,39 +90,50 @@
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
+	border-radius: 8px;
+	padding:3px 3px 3px 3px;
+	font-size: 20px;
 }
 
 button:hover {
     background-color: #008CBA;
     color: white;
 }
+		  .menu {
+				padding-top: 1px;
+				background-color: darkgray;
+				max-width: 100%;
+			}
 
         </style>
     </head>
     <body>
         <header>
-            <nav>
-                    <a href="index.html">
-				   <button>Alle retter</button></a>
-               <a href="filter.html?kategori=forretter">
-				   <button>Forretter</button></a>
-               <a href="filter.html?kategori=hovedretter">
-				   <button>Hovedretter</button></a>
-               <a href="filter.html?kategori=desserter">
-				   <button>Desserter</button></a>
-               <a href="filter.html?kategori=drikkevarer">
-				   <button>Drikkevarer</button></a>
-            </nav>
+
         </header>
          <section id="splash">
         <div class="ikon">
-
+		<a href="index.html">
         <img src="imgs/logo.png" id="logo">
-
+		</a>
         </div>
          <h1 class="toptitle">BISTRO BABUSHKA</h1>
 
          </section>
+         <section class="menu">
+        	 <nav>
+               <a href="index.html">
+				   <button><b>ALLE RETTER</b></button></a>
+               <a href="filter.html?kategori=forretter">
+				   <button><b>FORRETTER</b></button></a>
+               <a href="filter.html?kategori=hovedretter">
+				   <button><b>HOVEDRETTER</b></button></a>
+               <a href="filter.html?kategori=desserter">
+				   <button><b>DESSERTER</b></button></a>
+               <a href="filter.html?kategori=drikkevarer">
+				   <button><b>DRIKKEVARER</b></button></a>
+            </nav>
+            </section>
         <main class ="retContainer">
             <article class = "ret">
                     <h2 class = "overskrift" data-navn ></h2>

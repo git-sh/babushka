@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html>
-    <head>
+    <head lang="da">
         <meta charset="utf-8">
         <title>Babushka copy</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
+			* {
+				margin:0px;
+				padding:0px;
+			}
+
 			.retTemplate {
 				max-width: 100%;
 			}
@@ -15,6 +21,7 @@
 				grid-gap: 5px;
 				max-width: 100%;
 				margin: 5px auto 5px auto;
+				margin: 5px 30px 5px 30px;
             }
 
 			@media only screen and (min-width : 768px) and (max-width : 1024px) {
@@ -36,18 +43,17 @@
 				}
 			}
 
+
 			body {
 				 background-color:lightcyan;
-				font-family:Bebas Neue;
+				font-family:ABeeZee ;
 			}
 
 			 .toptitle {
 			  color: firebrick;
 				 font-size: 40px;
 				 font-family: Jokerman;
-				 text-align: center;
-				 margin-top: 10vw;
-				 margin-left: 2vw;
+				 align-self: center;
 		  }
 
 			header {
@@ -55,7 +61,6 @@
 				background-color: none;
 				position: fixed;
 			}
-
 
 			footer {
 				display:grid;
@@ -81,8 +86,8 @@
 				color: black;
 			}
 
-			h1 {
-				font-family:Carnivalee Freakshow;
+			h2 {
+				font-family:Bebas Neue;
 			}
 
 			img {
@@ -116,42 +121,51 @@
     background-color: white;
     color: black;
     border: 2px solid #008CBA;
+	border-radius: 8px;
+				padding:3px 3px 3px 3px;
+				font-size: 20px;
 }
 
-button:hover {
-    background-color: #008CBA;
-    color: white;
-}
+		button:hover {
+			background-color: #008CBA;
+			color: white;
+		}
+
+			.menu {
+				padding-top: 1px;
+				background-color: darkgray;
+				max-width: 100%;
+			}
 
         </style>
     </head>
     <body>
         <header>
-
-            <nav>
-               <a href="index.html">
-				   <button>Alle retter</button></a>
-               <a href="filter.html?kategori=forretter">
-				   <button>Forretter</button></a>
-               <a href="filter.html?kategori=hovedretter">
-				   <button>Hovedretter</button></a>
-               <a href="filter.html?kategori=desserter">
-				   <button>Desserter</button></a>
-               <a href="filter.html?kategori=drikkevarer">
-				   <button>Drikkevarer</button></a>
-        <h1>Menu</h1>
-			</nav>
-
         </header>
         <section id="splash">
         <div class="ikon">
-
+		<a href="index.html">
         <img src="imgs/logo.png" id="logo">
-
+			</a>
         </div>
          <h1 class="toptitle">BISTRO BABUSHKA</h1>
 
          </section>
+          <article class="menu">
+           <nav>
+  				<a href="index.html">
+				   <button><b>ALLE RETTER</b></button></a>
+               <a href="filter.html?kategori=forretter">
+				   <button><b>FORRETTER</b></button></a>
+               <a href="filter.html?kategori=hovedretter">
+				   <button><b>HOVEDRETTER</b></button></a>
+               <a href="filter.html?kategori=desserter">
+				   <button><b>DESSERTER</b></button></a>
+               <a href="filter.html?kategori=drikkevarer">
+				   <button><b>DRIKKEVARER</b></button></a>
+         <h2 class="overskrift">Menu</h2>
+			</nav>
+       </article>
         <main class ="retContainer">  </main>
 
 	   <template class ="retTemplate">
